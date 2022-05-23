@@ -44,7 +44,6 @@ cards.push({id:i+""+i,txt:i,url:potocard[i]})
 const board = document.getElementById("board");
 function addCards(v, i, arr) {
   const element = document.createElement("div");
-  // element.innerHTML = v.txt;
   element.id =v.txt
 
  let img= document.createElement('img')
@@ -53,12 +52,8 @@ function addCards(v, i, arr) {
 //  img.src=("https://sites.google.com/site/all18in/wallpapers")
  element.appendChild(img)
 
-  //  (arr[i].id%2==0)?i:i-1;
   element.className = "card hiden";
   return board.appendChild(element);
-
-
-
 }
 
 function addphoto(e){
@@ -68,7 +63,6 @@ img.style="height: 100px; width:100px;"
 }
 function removephoto(e){
 let img=e.children[0]
-// img.src=potocard[e.id]
 img.style="height:0px; width:0px;"
 }
 
@@ -79,11 +73,6 @@ img.style="height:0px; width:0px;"
 board.addEventListener("click", (e) => {
   let steps=0
   console.log(e.target);
-  
-  // document.getElementById("playrs").addEventListener('change',(e)=>{
-  //   document.forms[0][0].value
-  // })
- 
   
   if(e.target.className=="card hiden"){
     counttarget.push(e.target)
@@ -97,16 +86,16 @@ board.addEventListener("click", (e) => {
     e.target.style.color = "red";
   if (opencards.length%2 ==0) {
   document.getElementById("0").style.backgroundImage="url:https://sites.google.com/site/all18in/_/rsrc/1401806924591/wallpapers/Island.jpg?height=355&width=400"
-    // debugger;
+   
     if (opencards[countopen].id == opencards[countopen-1].id) {//2 card is true
       console.log("good"),
-      // opencards[countopen-1].className += " open",
+    
       opencards[countopen].className += " open" ,
       
       users[toruser].points++
       document.getElementById("name0").innerHTML=textuser(0)
       document.getElementById("name1").innerHTML=textuser(1)
-      // (toruser==1)?toruser=0:toruser=1
+  
       counttarget=[]
      if (opencards.length==cards.length){
     //  let awinner =findwinner()
@@ -198,7 +187,7 @@ else if(u0==u1){
 else {return ` ${users[1].name} is a winner!!`}
 }
 function getgrid(){
-// let  num=Number(document.getElementById("number").value)
+
 let num=cards.length/2
 if(num<=6){ return "auto ".repeat(num)}
 else{ return "auto ".repeat(6)}
