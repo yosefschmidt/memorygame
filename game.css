@@ -8,21 +8,12 @@ span{
 #playrs{
     grid-template-columns:2fr 2fr;
     
-    /* justify-content: baseline; */
     display: grid;
 }
 img{ 
    height: 0px;
    width: 0px;}
-#name0{
-    border: groove 4px transparent;
-    border-radius: 40px;
-    
-}
-#name1{
-    border: groove 4px transparent;
-    border-radius: 40px;
-}
+
 
 h1{
     justify-content: center;
@@ -36,9 +27,9 @@ h1{
    font-size: xx-large;
 display: grid;
 justify-content: center;
-grid-template-columns:  auto auto auto auto;
 gap: 20px;
 }
+
 
 .card{
     margin-top: 20px;
@@ -49,7 +40,7 @@ gap: 20px;
 justify-content: center;
     background-color: rgb(148, 180, 88);
     border: 10px;border-style: double; color: black;
-    border-radius: 4px;
+    border-radius: 7px;
     border-color: green;
     display: grid;
     text-align: center;
@@ -64,12 +55,22 @@ justify-content: center;
     
 
     /* background-image: url(https://sites.google.com/site/all18in/_/rsrc/1401806935314/wallpapers/Amazing%20Beach.jpg?height=355&width=400); */
-    
+   
     }
     .open{
         border-color: chartreuse;
    box-shadow: 0px 0px 0px 0px;
 
+    }
+    .userplay{
+background-color:rgba(255,0,0,0.3); 
+border: groove 4px red;
+border-radius: 40px; 
+
+    }
+    .notplay{
+        border-color: transparent;
+        background-color:transparent;
     }
   
 
