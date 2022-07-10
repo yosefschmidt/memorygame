@@ -90,6 +90,8 @@ board.addEventListener("click", (e) => {
         if (opencards.length == cards.length) {
           document.getElementById("board").innerHTML = findwinner();
           document.getElementById("board").style.fontSize = "100px";
+          document.getElementById("board").classList.add("textend");
+
           a = document.getElementById("board");
           a.appendChild(document.createElement("submit"));
 
